@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ios_boilerplate_swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,101 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uK8-Q0-ZmU">
+                                <rect key="frame" x="20" y="20" width="74" height="30"/>
+                                <state key="normal" title="Grab a Flic">
+                                    <color key="titleColor" red="0.20392156862745098" green="0.59607843137254901" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="grabButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wye-IN-tdj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qjx-Gj-nFa">
+                                <rect key="frame" x="20" y="58" width="59" height="30"/>
+                                <state key="normal" title="Connect">
+                                    <color key="titleColor" red="0.20392156862745098" green="0.59607843137254901" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="connectFlic" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mdc-JP-i5J"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aY2-9w-Ebo">
+                                <rect key="frame" x="20" y="96" width="78" height="30"/>
+                                <state key="normal" title="Disconnect">
+                                    <color key="titleColor" red="0.20392156862745098" green="0.59607843137254901" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="disconnectFlic" destination="BYZ-38-t0r" eventType="touchUpInside" id="4fE-3I-tdb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ikf-3E-z4X">
+                                <rect key="frame" x="20" y="284" width="560" height="32"/>
+                                <color key="backgroundColor" red="0.90588235294117647" green="0.29803921568627451" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="2K7-Cf-izU"/>
+                                    <constraint firstAttribute="height" constant="32" id="KYv-st-dJe"/>
+                                    <constraint firstAttribute="height" constant="32" id="zul-1j-QcK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="2K7-Cf-izU"/>
+                                        <exclude reference="zul-1j-QcK"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ikf-3E-z4X" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="0zi-Fq-rWa"/>
+                            <constraint firstItem="Ikf-3E-z4X" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="5PX-11-850"/>
+                            <constraint firstItem="uK8-Q0-ZmU" firstAttribute="top" secondItem="Ikf-3E-z4X" secondAttribute="bottom" constant="8" id="8xj-dO-H2E"/>
+                            <constraint firstItem="Ikf-3E-z4X" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="AVS-A6-t4Z"/>
+                            <constraint firstItem="Ikf-3E-z4X" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="BkF-HV-FC0"/>
+                            <constraint firstItem="Qjx-Gj-nFa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="BuI-56-erj"/>
+                            <constraint firstItem="Qjx-Gj-nFa" firstAttribute="top" secondItem="uK8-Q0-ZmU" secondAttribute="bottom" constant="8" id="Fnm-FH-5yB"/>
+                            <constraint firstItem="aY2-9w-Ebo" firstAttribute="top" secondItem="Qjx-Gj-nFa" secondAttribute="bottom" constant="8" id="FxV-ew-LKK"/>
+                            <constraint firstItem="Ikf-3E-z4X" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="264" id="JhY-UG-eI0"/>
+                            <constraint firstItem="uK8-Q0-ZmU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Me6-nZ-KKS"/>
+                            <constraint firstItem="aY2-9w-Ebo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="XEh-Dn-p1t"/>
+                            <constraint firstItem="Qjx-Gj-nFa" firstAttribute="top" secondItem="uK8-Q0-ZmU" secondAttribute="bottom" constant="8" id="adA-fM-MQk"/>
+                            <constraint firstItem="Ikf-3E-z4X" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="dDj-D4-A5O"/>
+                            <constraint firstItem="uK8-Q0-ZmU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="dpB-sS-SF0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ikf-3E-z4X" secondAttribute="trailing" constant="180" id="hnh-Hc-7WT"/>
+                            <constraint firstItem="aY2-9w-Ebo" firstAttribute="top" secondItem="Qjx-Gj-nFa" secondAttribute="bottom" constant="8" id="jq2-lW-Gzh"/>
+                            <constraint firstItem="aY2-9w-Ebo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="kqH-QY-5XE"/>
+                            <constraint firstItem="Ikf-3E-z4X" firstAttribute="top" secondItem="aY2-9w-Ebo" secondAttribute="bottom" constant="158" id="mym-Nc-Grj"/>
+                            <constraint firstItem="uK8-Q0-ZmU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="pV3-PD-GLn"/>
+                            <constraint firstItem="Qjx-Gj-nFa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="qJl-fw-NRS"/>
+                            <constraint firstItem="Ikf-3E-z4X" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="180" id="z4B-Qx-odo"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="8xj-dO-H2E"/>
+                                <exclude reference="pV3-PD-GLn"/>
+                                <exclude reference="Fnm-FH-5yB"/>
+                                <exclude reference="qJl-fw-NRS"/>
+                                <exclude reference="FxV-ew-LKK"/>
+                                <exclude reference="kqH-QY-5XE"/>
+                                <exclude reference="5PX-11-850"/>
+                                <exclude reference="AVS-A6-t4Z"/>
+                                <exclude reference="BkF-HV-FC0"/>
+                                <exclude reference="JhY-UG-eI0"/>
+                                <exclude reference="hnh-Hc-7WT"/>
+                                <exclude reference="z4B-Qx-odo"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="indicator" destination="Ikf-3E-z4X" id="aFS-x5-t7K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="538" y="579"/>
         </scene>
     </scenes>
 </document>

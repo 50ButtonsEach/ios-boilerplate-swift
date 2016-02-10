@@ -50,7 +50,14 @@ class ViewController: UIViewController, SCLFlicManagerDelegate, SCLFlicButtonDel
     func handleOpenURL(url: NSURL) -> Bool {
         // If we have already grabbed a Flic then we need to remove it before generating a new one since this demo project is not set up ta support multiple Flics.
         if (self.button != nil) { self.manager?.forgetButton(button) }
-        self.button = self.manager?.generateButtonFromURL(url)
+        
+        do {
+            try self.button = self.manager?.generateButtonFromURL(url)
+        } catch let error as NSError {
+            print("Error: \(error.domain) - \(error.code)")
+            return true;
+        }
+        
         if ( self.button == nil ) { NSLog("A Flic object coult not be created..") }
         self.button?.delegate = self
         // TODO: Here would be a good place to select the Flic mode. self.button?.mode = ...

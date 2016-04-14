@@ -1,2 +1,2 @@
 # ios-boilerplate-swift
-This project demonstrates how you can implement the fliclib framework in a Swift application. Please note that this project is just a basic setup and is therefore not set up for background execution or state preservation. All further information needed is available at our developer portal. 
+This version is updated to support the 1.1.3 release of fliclib and thus also needs the Flic app 2.0 or later version. This project demonstrates how you can implement the fliclib framework in a Swift application. Please note that this project is just a basic setup and and needs to be configured for your own needs. All further information needed is available at our developer portal. 

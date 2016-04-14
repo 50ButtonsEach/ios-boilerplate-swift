@@ -42,9 +42,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
-        NSLog("Got URL: %@", url)
-        let viewcontroller: ViewController = (self.window?.rootViewController)! as! ViewController
-        return viewcontroller.handleOpenURL(url)
+        
+        if ((SCLFlicManager.sharedManager()?.handleOpenURL(url))!) {
+            return true
+        }
+        
+        return false
     }
 
 }

@@ -20,7 +20,7 @@ class ViewController: UIViewController, SCLFlicManagerDelegate, SCLFlicButtonDel
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         // TODO: If you want background execution you must opt in here. Dont forget to add Bluetooth Background mode in your project settings as well.
-        SCLFlicManager.configureWithDelegate(self, defaultButtonDelegate: self, appID: SCL_APP_ID, appSecret: SCL_APP_SECRET, backgroundExecution: false)
+        SCLFlicManager.configure(with: self, defaultButtonDelegate: self, appID: SCL_APP_ID, appSecret: SCL_APP_SECRET, backgroundExecution: false)
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,69 +30,76 @@ class ViewController: UIViewController, SCLFlicManagerDelegate, SCLFlicButtonDel
     
     @IBAction func grabButton() {
         print("Grabbing a flic..")
-        SCLFlicManager.sharedManager()?.grabFlicFromFlicAppWithCallbackUrlScheme("ios-boilerplate-swift")
+        SCLFlicManager.shared()?.grabFlicFromFlicApp(withCallbackUrlScheme: "ios-boilerplate-swift")
     }
     
     @IBAction func connectFlic() {
-        SCLFlicManager.sharedManager()?.knownButtons().values.first?.connect()
+        for (_, value) in (SCLFlicManager.shared()?.knownButtons())! {
+            print("Connecting button..")
+            value.connect()
+        }
     }
     
     @IBAction func disconnectFlic() {
-        SCLFlicManager.sharedManager()?.knownButtons().values.first?.disconnect()
+        for (_, value) in (SCLFlicManager.shared()?.knownButtons())! {
+            print("Disconnecting button..")
+            value.disconnect()
+        }
     }
     
     // --- SCLFlicManagerDelegate menthods ---
     
-    func flicManager(manager: SCLFlicManager, didGrabFlicButton button: SCLFlicButton?, withError error: NSError?) {
+    func flicManager(_ manager: SCLFlicManager, didGrab button: SCLFlicButton?, withError error: Error?) {
         if (error != nil) {
-            print("Error: \(error!.domain) - \(error!.code)")
+            print("Error: \(error!._domain) - \(error!._code)")
             return
         }
         // TODO: Here would be a good place to set the Flic latency in case you need lower latency
         //       Consider choosing your prefered triggerBehavior as well (Click / hold is default)
     }
     
-    func flicManager(manager: SCLFlicManager, didChangeBluetoothState state: SCLFlicManagerBluetoothState) {
+    func flicManager(_ manager: SCLFlicManager, didChange state: SCLFlicManagerBluetoothState) {
         // TODO: Handle bluetooth state changes.
         print("Did change bluetooth state: \(state.rawValue)")
     }
     
-    func flicManagerDidRestoreState(manager: SCLFlicManager) {
+    func flicManagerDidRestoreState(_ manager: SCLFlicManager) {
         print("Did restore state")
     }
     
     // --- SCLFlicButtonDelegate methods ---
     
-    func flicButtonDidConnect(button: SCLFlicButton) {
+    func flicButtonDidConnect(_ button: SCLFlicButton) {
         print("Flic is connected")
     }
     
-    func flicButtonIsReady(button: SCLFlicButton) {
+    func flicButtonIsReady(_ button: SCLFlicButton) {
         print("Flic is ready")
     }
     
-    func flicButton(button: SCLFlicButton, didDisconnectWithError error: NSError?) {
+    func flicButton(_ button: SCLFlicButton, didDisconnectWithError error: Error?) {
         print("Flic disconnected")
     }
     
-    func flicButton(button: SCLFlicButton, didFailToConnectWithError error: NSError?) {
+    func flicButton(_ button: SCLFlicButton, didFailToConnectWithError error: Error?) {
         print("Did fail to connect Flic")
         if (error != nil) {
-            if (error!.code == SCLFlicError.ButtonIsPrivate.rawValue) {
-                SCLFlicManager.sharedManager()?.forgetButton(button)
+            if (error!._code == SCLFlicError.buttonIsPrivate.rawValue) {
+                SCLFlicManager.shared()?.forget(button)
             }
         }
     }
     
-    func flicButton(button: SCLFlicButton, didReceiveButtonDown queued: Bool, age: Int) {
+    func flicButton(_ button: SCLFlicButton, didReceiveButtonDown queued: Bool, age: Int) {
+        print("Button down..")
         self.indicator.backgroundColor = button.color
     }
     
-    func flicButton(button: SCLFlicButton, didReceiveButtonUp queued: Bool, age: Int) {
+    func flicButton(_ button: SCLFlicButton, didReceiveButtonUp queued: Bool, age: Int) {
         self.indicator.backgroundColor = UIColor.init(red: 231.0/255.0, green: 76.0/255.0, blue: 60.0/255.0, alpha: 1.0)
     }
     
-    func flicButton(button: SCLFlicButton, didReceiveButtonClick queued: Bool, age: Int) {
+    func flicButton(_ button: SCLFlicButton, didReceiveButtonClick queued: Bool, age: Int) {
         print("Flic was clicked..")
     }
 

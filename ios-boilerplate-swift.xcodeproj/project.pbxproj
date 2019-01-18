@@ -12,18 +12,20 @@
 		3AB2FFEB1BD12351001D8DA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB2FFE91BD12351001D8DA8 /* Main.storyboard */; };
 		3AB2FFED1BD12351001D8DA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AB2FFEC1BD12351001D8DA8 /* Assets.xcassets */; };
 		3AB2FFF01BD12351001D8DA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB2FFEE1BD12351001D8DA8 /* LaunchScreen.storyboard */; };
-		3AB2FFF81BD13A28001D8DA8 /* fliclib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AB2FFF71BD13A28001D8DA8 /* fliclib.framework */; };
-		3AB2FFF91BD13A28001D8DA8 /* fliclib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3AB2FFF71BD13A28001D8DA8 /* fliclib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		75E2EF6221F0D3F3006246F6 /* SCLFlicManagerSimulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E2EF5D21F0D3F3006246F6 /* SCLFlicManagerSimulator.m */; };
+		75E2EF6321F0D3F3006246F6 /* SCLFlicButtonSimulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E2EF6021F0D3F3006246F6 /* SCLFlicButtonSimulator.m */; };
+		75E2EF6421F0D421006246F6 /* fliclib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AB2FFF71BD13A28001D8DA8 /* fliclib.framework */; };
+		75E2EF6521F0D421006246F6 /* fliclib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3AB2FFF71BD13A28001D8DA8 /* fliclib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		3AB2FFFA1BD13A29001D8DA8 /* Embed Frameworks */ = {
+		75E2EF6621F0D421006246F6 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				3AB2FFF91BD13A28001D8DA8 /* fliclib.framework in Embed Frameworks */,
+				75E2EF6521F0D421006246F6 /* fliclib.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -40,6 +42,11 @@
 		3AB2FFF11BD12351001D8DA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3AB2FFF71BD13A28001D8DA8 /* fliclib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = fliclib.framework; path = "fliclib-ios/fliclib.framework"; sourceTree = "<group>"; };
 		3AB2FFFB1BD13B22001D8DA8 /* ios-boilerplate-swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ios-boilerplate-swift-Bridging-Header.h"; sourceTree = "<group>"; };
+		75E2EF5D21F0D3F3006246F6 /* SCLFlicManagerSimulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLFlicManagerSimulator.m; sourceTree = "<group>"; };
+		75E2EF5E21F0D3F3006246F6 /* SCLFlicButtonSimulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLFlicButtonSimulator.h; sourceTree = "<group>"; };
+		75E2EF5F21F0D3F3006246F6 /* SCLFlicManagerSimulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLFlicManagerSimulator.h; sourceTree = "<group>"; };
+		75E2EF6021F0D3F3006246F6 /* SCLFlicButtonSimulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLFlicButtonSimulator.m; sourceTree = "<group>"; };
+		75E2EF6121F0D3F3006246F6 /* fliclibWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fliclibWrapper.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AB2FFF81BD13A28001D8DA8 /* fliclib.framework in Frameworks */,
+				75E2EF6421F0D421006246F6 /* fliclib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +64,7 @@
 		3AB2FFD91BD12351001D8DA8 = {
 			isa = PBXGroup;
 			children = (
+				75E2EF5C21F0D3F3006246F6 /* simulator-wrapper */,
 				3AB2FFF71BD13A28001D8DA8 /* fliclib.framework */,
 				3AB2FFE41BD12351001D8DA8 /* ios-boilerplate-swift */,
 				3AB2FFE31BD12351001D8DA8 /* Products */,
@@ -85,6 +93,19 @@
 			path = "ios-boilerplate-swift";
 			sourceTree = "<group>";
 		};
+		75E2EF5C21F0D3F3006246F6 /* simulator-wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				75E2EF5D21F0D3F3006246F6 /* SCLFlicManagerSimulator.m */,
+				75E2EF5E21F0D3F3006246F6 /* SCLFlicButtonSimulator.h */,
+				75E2EF5F21F0D3F3006246F6 /* SCLFlicManagerSimulator.h */,
+				75E2EF6021F0D3F3006246F6 /* SCLFlicButtonSimulator.m */,
+				75E2EF6121F0D3F3006246F6 /* fliclibWrapper.h */,
+			);
+			name = "simulator-wrapper";
+			path = "fliclib-ios/simulator-wrapper";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -95,7 +116,7 @@
 				3AB2FFDE1BD12351001D8DA8 /* Sources */,
 				3AB2FFDF1BD12351001D8DA8 /* Frameworks */,
 				3AB2FFE01BD12351001D8DA8 /* Resources */,
-				3AB2FFFA1BD13A29001D8DA8 /* Embed Frameworks */,
+				75E2EF6621F0D421006246F6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -113,13 +134,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Anton Meier";
 				TargetAttributes = {
 					3AB2FFE11BD12351001D8DA8 = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = J676M46HZA;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -159,8 +180,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75E2EF6221F0D3F3006246F6 /* SCLFlicManagerSimulator.m in Sources */,
 				3AB2FFE81BD12351001D8DA8 /* ViewController.swift in Sources */,
 				3AB2FFE61BD12351001D8DA8 /* AppDelegate.swift in Sources */,
+				75E2EF6321F0D3F3006246F6 /* SCLFlicButtonSimulator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,13 +217,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -222,7 +255,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -239,13 +272,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -261,9 +304,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -286,7 +330,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ios-boilerplate-swift/ios-boilerplate-swift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -306,7 +351,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shortcutlabs.ios-boilerplate-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ios-boilerplate-swift/ios-boilerplate-swift-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

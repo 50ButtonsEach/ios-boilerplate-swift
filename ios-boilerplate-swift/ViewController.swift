@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import fliclib
 
 class ViewController: UIViewController, SCLFlicManagerDelegate, SCLFlicButtonDelegate {
     
@@ -83,11 +84,6 @@ class ViewController: UIViewController, SCLFlicManagerDelegate, SCLFlicButtonDel
     
     func flicButton(_ button: SCLFlicButton, didFailToConnectWithError error: Error?) {
         print("Did fail to connect Flic")
-        if (error != nil) {
-            if (error!._code == SCLFlicError.buttonIsPrivate.rawValue) {
-                SCLFlicManager.shared()?.forget(button)
-            }
-        }
     }
     
     func flicButton(_ button: SCLFlicButton, didReceiveButtonDown queued: Bool, age: Int) {

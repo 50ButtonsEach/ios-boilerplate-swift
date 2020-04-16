@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import fliclib
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

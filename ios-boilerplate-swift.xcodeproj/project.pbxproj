@@ -3,19 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3AAA66EC244883D100B0ABFE /* fliclib.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AAA66EB244883D100B0ABFE /* fliclib.xcframework */; };
+		3AAA66ED244883D100B0ABFE /* fliclib.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3AAA66EB244883D100B0ABFE /* fliclib.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		3AB2FFE61BD12351001D8DA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB2FFE51BD12351001D8DA8 /* AppDelegate.swift */; };
 		3AB2FFE81BD12351001D8DA8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB2FFE71BD12351001D8DA8 /* ViewController.swift */; };
 		3AB2FFEB1BD12351001D8DA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB2FFE91BD12351001D8DA8 /* Main.storyboard */; };
 		3AB2FFED1BD12351001D8DA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AB2FFEC1BD12351001D8DA8 /* Assets.xcassets */; };
 		3AB2FFF01BD12351001D8DA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB2FFEE1BD12351001D8DA8 /* LaunchScreen.storyboard */; };
-		75E2EF6221F0D3F3006246F6 /* SCLFlicManagerSimulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E2EF5D21F0D3F3006246F6 /* SCLFlicManagerSimulator.m */; };
-		75E2EF6321F0D3F3006246F6 /* SCLFlicButtonSimulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E2EF6021F0D3F3006246F6 /* SCLFlicButtonSimulator.m */; };
-		75E2EF6421F0D421006246F6 /* fliclib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AB2FFF71BD13A28001D8DA8 /* fliclib.framework */; };
-		75E2EF6521F0D421006246F6 /* fliclib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3AB2FFF71BD13A28001D8DA8 /* fliclib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,7 +23,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				75E2EF6521F0D421006246F6 /* fliclib.framework in Embed Frameworks */,
+				3AAA66ED244883D100B0ABFE /* fliclib.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -33,6 +31,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3AAA66EB244883D100B0ABFE /* fliclib.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = fliclib.xcframework; path = "fliclib-ios/fliclib.xcframework"; sourceTree = "<group>"; };
 		3AB2FFE21BD12351001D8DA8 /* ios-boilerplate-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-boilerplate-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AB2FFE51BD12351001D8DA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AB2FFE71BD12351001D8DA8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,13 +39,7 @@
 		3AB2FFEC1BD12351001D8DA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AB2FFEF1BD12351001D8DA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3AB2FFF11BD12351001D8DA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3AB2FFF71BD13A28001D8DA8 /* fliclib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = fliclib.framework; path = "fliclib-ios/fliclib.framework"; sourceTree = "<group>"; };
 		3AB2FFFB1BD13B22001D8DA8 /* ios-boilerplate-swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ios-boilerplate-swift-Bridging-Header.h"; sourceTree = "<group>"; };
-		75E2EF5D21F0D3F3006246F6 /* SCLFlicManagerSimulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLFlicManagerSimulator.m; sourceTree = "<group>"; };
-		75E2EF5E21F0D3F3006246F6 /* SCLFlicButtonSimulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLFlicButtonSimulator.h; sourceTree = "<group>"; };
-		75E2EF5F21F0D3F3006246F6 /* SCLFlicManagerSimulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLFlicManagerSimulator.h; sourceTree = "<group>"; };
-		75E2EF6021F0D3F3006246F6 /* SCLFlicButtonSimulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLFlicButtonSimulator.m; sourceTree = "<group>"; };
-		75E2EF6121F0D3F3006246F6 /* fliclibWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fliclibWrapper.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,20 +47,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75E2EF6421F0D421006246F6 /* fliclib.framework in Frameworks */,
+				3AAA66EC244883D100B0ABFE /* fliclib.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3AAA66EA244883D100B0ABFE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3AAA66EB244883D100B0ABFE /* fliclib.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3AB2FFD91BD12351001D8DA8 = {
 			isa = PBXGroup;
 			children = (
-				75E2EF5C21F0D3F3006246F6 /* simulator-wrapper */,
-				3AB2FFF71BD13A28001D8DA8 /* fliclib.framework */,
 				3AB2FFE41BD12351001D8DA8 /* ios-boilerplate-swift */,
 				3AB2FFE31BD12351001D8DA8 /* Products */,
+				3AAA66EA244883D100B0ABFE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,19 +91,6 @@
 				3AB2FFFB1BD13B22001D8DA8 /* ios-boilerplate-swift-Bridging-Header.h */,
 			);
 			path = "ios-boilerplate-swift";
-			sourceTree = "<group>";
-		};
-		75E2EF5C21F0D3F3006246F6 /* simulator-wrapper */ = {
-			isa = PBXGroup;
-			children = (
-				75E2EF5D21F0D3F3006246F6 /* SCLFlicManagerSimulator.m */,
-				75E2EF5E21F0D3F3006246F6 /* SCLFlicButtonSimulator.h */,
-				75E2EF5F21F0D3F3006246F6 /* SCLFlicManagerSimulator.h */,
-				75E2EF6021F0D3F3006246F6 /* SCLFlicButtonSimulator.m */,
-				75E2EF6121F0D3F3006246F6 /* fliclibWrapper.h */,
-			);
-			name = "simulator-wrapper";
-			path = "fliclib-ios/simulator-wrapper";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +126,6 @@
 				TargetAttributes = {
 					3AB2FFE11BD12351001D8DA8 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = J676M46HZA;
 						LastSwiftMigration = 1010;
 					};
 				};
@@ -149,6 +135,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -180,10 +167,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75E2EF6221F0D3F3006246F6 /* SCLFlicManagerSimulator.m in Sources */,
 				3AB2FFE81BD12351001D8DA8 /* ViewController.swift in Sources */,
 				3AB2FFE61BD12351001D8DA8 /* AppDelegate.swift in Sources */,
-				75E2EF6321F0D3F3006246F6 /* SCLFlicButtonSimulator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,13 +304,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = J676M46HZA;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/fliclib-ios",
 				);
 				INFOPLIST_FILE = "ios-boilerplate-swift/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shortcutlabs.ios-boilerplate-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ios-boilerplate-swift/ios-boilerplate-swift-Bridging-Header.h";
@@ -341,13 +329,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = J676M46HZA;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/fliclib-ios",
 				);
 				INFOPLIST_FILE = "ios-boilerplate-swift/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shortcutlabs.ios-boilerplate-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ios-boilerplate-swift/ios-boilerplate-swift-Bridging-Header.h";
